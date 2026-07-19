@@ -1,0 +1,34 @@
+<h1>Your Cart</h1>
+
+<ng-container *ngIf="(cartService.items$ | async) as items">
+  <div *ngIf="items.length > 0; else emptyCart">
+    <p class="restaurant-name">Order from: <strong>{{ items[0].restaurantName }}</strong></p>
+
+    <div class="cart-list">
+      <div class="cart-item" *ngFor="let item of items">
+        <div class="item-info">
+          <p class="item-name">{{ item.menuItem.name }}</p>
+          <p class="item-price">₹{{ item.menuItem.price }} each</p>
+        </div>
+        <div class="qty-controls">
+          <button (click)="decrement(item.menuItem.id)">−</button>
+          <span>{{ item.quantity }}</span>
+          <button (click)="increment(item.menuItem.id, item.restaurantId, item.restaurantName)">+</button>
+        </div>
+        <p class="line-total">₹{{ item.menuItem.price * item.quantity }}</p>
+        <button class="remove-btn" (click)="remove(item.menuItem.id)">Remove</button>
+      </div>
+    </div>
+
+    <div class="cart-total">
+      <span>Total</span>
+      <strong>₹{{ cartService.getTotal() }}</strong>
+    </div>
+
+    <button class="btn checkout-btn" (click)="checkout()">Place Order</button>
+  </div>
+
+  <ng-template #emptyCart>
+    <p>Your cart is empty. <a routerLink="/">Browse restaurants</a> to get started.</p>
+  </ng-template>
+</ng-container>
