@@ -1,0 +1,26 @@
+:root {
+  --accent: #e8590c;
+  --accent-dark: #c94a09;
+  --bg: #faf8f5;
+  --card-bg: #ffffff;
+  --text: #222222;
+  --muted: #6b6b6b;
+  --success: #1a7f37;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  height: 100%;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+a { color: inherit; }
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+}
