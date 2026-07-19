@@ -1,0 +1,54 @@
+.back-link {
+  display: inline-block;
+  margin-bottom: 16px;
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.restaurant-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.restaurant-header .emoji { font-size: 2.8rem; }
+.restaurant-header h1 { margin: 0; }
+.cuisine { color: var(--muted); margin: 4px 0 0; }
+
+.menu-list { display: flex; flex-direction: column; gap: 12px; }
+
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--card-bg);
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 14px 18px;
+}
+
+.item-name { font-weight: 600; margin: 0 0 4px; display: flex; align-items: center; gap: 8px; }
+.item-desc { color: var(--muted); font-size: 0.9rem; margin: 0 0 6px; }
+.item-price { font-weight: 700; margin: 0; }
+
+.veg-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+  background: var(--success);
+  display: inline-block;
+  border: 1px solid var(--success);
+}
+.veg-dot.non-veg { background: #c62828; border-color: #c62828; }
+
+.btn {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: 600;
+}
+.btn:hover { background: var(--accent-dark); }
