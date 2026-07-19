@@ -1,6 +1,4 @@
-# food-delivery-app - "Online food ordering app built with Angular"
-# Online Food Delivery Application
-
+# Online Food Delivery Application built with Angular
 A responsive food ordering web app built with **Angular** (standalone components) and **TypeScript**, where users can browse restaurants, build an order, check out, and track delivery status in real time.
 
 ## Features
