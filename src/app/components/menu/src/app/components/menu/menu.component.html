@@ -1,0 +1,29 @@
+<div *ngIf="restaurant; else notFound">
+  <a routerLink="/" class="back-link">&larr; Back to restaurants</a>
+
+  <div class="restaurant-header">
+    <span class="emoji">{{ restaurant.imageEmoji }}</span>
+    <div>
+      <h1>{{ restaurant.name }}</h1>
+      <p class="cuisine">{{ restaurant.cuisine }} · ⭐ {{ restaurant.rating }} · 🕒 {{ restaurant.deliveryTimeMinutes }} min</p>
+    </div>
+  </div>
+
+  <div class="menu-list">
+    <div class="menu-item" *ngFor="let item of restaurant.menu">
+      <div class="item-info">
+        <p class="item-name">
+          <span class="veg-dot" [class.non-veg]="!item.isVeg"></span>
+          {{ item.name }}
+        </p>
+        <p class="item-desc">{{ item.description }}</p>
+        <p class="item-price">₹{{ item.price }}</p>
+      </div>
+      <button class="btn" (click)="addToCart(item)">Add</button>
+    </div>
+  </div>
+</div>
+
+<ng-template #notFound>
+  <p>Restaurant not found. <a routerLink="/">Go back</a>.</p>
+</ng-template>
