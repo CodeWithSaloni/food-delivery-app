@@ -1,0 +1,49 @@
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--accent);
+  color: #fff;
+  padding: 14px 24px;
+}
+
+.brand {
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: #fff;
+}
+
+.cart-link {
+  position: relative;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+  background: rgba(255,255,255,0.15);
+  padding: 8px 14px;
+  border-radius: 6px;
+}
+
+.cart-badge {
+  background: #fff;
+  color: var(--accent-dark);
+  border-radius: 999px;
+  padding: 1px 7px;
+  font-size: 0.75rem;
+  margin-left: 6px;
+  font-weight: 700;
+}
+
+.app-main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 24px;
+  min-height: 70vh;
+}
+
+.app-footer {
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.85rem;
+  padding: 20px;
+}
