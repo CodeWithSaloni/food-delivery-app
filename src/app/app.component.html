@@ -1,0 +1,17 @@
+<header class="app-header">
+  <a routerLink="/" class="brand">🍽️ FoodieExpress</a>
+  <a routerLink="/cart" class="cart-link">
+    Cart
+    <span class="cart-badge" *ngIf="(cartService.items$ | async)?.length">
+      {{ cartService.getItemCount() }}
+    </span>
+  </a>
+</header>
+
+<main class="app-main">
+  <router-outlet></router-outlet>
+</main>
+
+<footer class="app-footer">
+  <span>&copy; 2026 FoodieExpress — demo project</span>
+</footer>
