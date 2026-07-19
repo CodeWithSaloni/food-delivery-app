@@ -1,0 +1,18 @@
+<h1>Restaurants near you</h1>
+<p class="subtitle">Choose a restaurant to see the menu.</p>
+
+<div class="restaurant-grid">
+  
+    class="restaurant-card"
+    *ngFor="let restaurant of restaurants"
+    [routerLink]="['/restaurant', restaurant.id]"
+  >
+    <div class="emoji">{{ restaurant.imageEmoji }}</div>
+    <h2>{{ restaurant.name }}</h2>
+    <p class="cuisine">{{ restaurant.cuisine }}</p>
+    <div class="meta-row">
+      <span>⭐ {{ restaurant.rating }}</span>
+      <span>🕒 {{ restaurant.deliveryTimeMinutes }} min</span>
+    </div>
+  </a>
+</div>
