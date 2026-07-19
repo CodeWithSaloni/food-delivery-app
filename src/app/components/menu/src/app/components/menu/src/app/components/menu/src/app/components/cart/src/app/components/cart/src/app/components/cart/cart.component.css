@@ -1,1 +1,60 @@
+.restaurant-name { color: var(--muted); margin-bottom: 16px; }
 
+.cart-list { display: flex; flex-direction: column; gap: 10px; }
+
+.cart-item {
+  display: grid;
+  grid-template-columns: 1fr auto auto auto;
+  align-items: center;
+  gap: 14px;
+  background: var(--card-bg);
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 12px 16px;
+}
+
+.item-name { font-weight: 600; margin: 0; }
+.item-price { color: var(--muted); font-size: 0.85rem; margin: 2px 0 0; }
+
+.qty-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.qty-controls button {
+  width: 28px;
+  height: 28px;
+  border: 1px solid #ddd;
+  background: #fff;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.line-total { font-weight: 700; margin: 0; }
+
+.remove-btn {
+  background: none;
+  border: none;
+  color: #c62828;
+  font-size: 0.85rem;
+}
+
+.cart-total {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.2rem;
+  padding: 16px 4px;
+  border-top: 2px solid #eee;
+  margin-top: 16px;
+}
+
+.checkout-btn {
+  width: 100%;
+  padding: 14px;
+  font-size: 1rem;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+}
+.checkout-btn:hover { background: var(--accent-dark); }
