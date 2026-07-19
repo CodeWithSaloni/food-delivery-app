@@ -1,0 +1,78 @@
+.placed-at { color: var(--muted); margin-bottom: 24px; }
+
+.status-tracker {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 32px;
+  position: relative;
+}
+
+.status-tracker::before {
+  content: '';
+  position: absolute;
+  top: 8px;
+  left: 5%;
+  right: 5%;
+  height: 2px;
+  background: #e0e0e0;
+  z-index: 0;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  flex: 1;
+  position: relative;
+  z-index: 1;
+  color: var(--muted);
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+.dot {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #e0e0e0;
+  border: 2px solid #e0e0e0;
+}
+
+.step.active { color: var(--accent-dark); font-weight: 600; }
+.step.active .dot { background: var(--accent); border-color: var(--accent); }
+
+.order-summary {
+  background: var(--card-bg);
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 16px 20px;
+  margin-bottom: 24px;
+}
+
+.summary-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 0;
+  font-size: 0.95rem;
+}
+
+.summary-total {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #eee;
+  margin-top: 8px;
+  padding-top: 10px;
+  font-size: 1.1rem;
+}
+
+.btn {
+  display: inline-block;
+  background: var(--accent);
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+}
+.btn:hover { background: var(--accent-dark); }
