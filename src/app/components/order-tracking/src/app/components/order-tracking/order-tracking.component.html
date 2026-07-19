@@ -1,0 +1,33 @@
+<ng-container *ngIf="(currentOrder$ | async) as order; else noOrder">
+  <h1>Order #{{ order.id }}</h1>
+  <p class="placed-at">Placed at {{ order.placedAt | date: 'shortTime' }}</p>
+
+  <div class="status-tracker">
+    <div
+      class="step"
+      *ngFor="let step of steps; let i = index"
+      [class.active]="i <= stepIndex(order.status)"
+    >
+      <div class="dot"></div>
+      <span>{{ step }}</span>
+    </div>
+  </div>
+
+  <div class="order-summary">
+    <h2>Order Summary</h2>
+    <div class="summary-item" *ngFor="let item of order.items">
+      <span>{{ item.quantity }} × {{ item.menuItem.name }}</span>
+      <span>₹{{ item.menuItem.price * item.quantity }}</span>
+    </div>
+    <div class="summary-total">
+      <span>Total</span>
+      <strong>₹{{ order.total }}</strong>
+    </div>
+  </div>
+
+  <a routerLink="/" class="btn">Order Again</a>
+</ng-container>
+
+<ng-template #noOrder>
+  <p>No active order. <a routerLink="/">Browse restaurants</a> to place one.</p>
+</ng-template>
